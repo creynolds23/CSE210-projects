@@ -1,6 +1,6 @@
 public class BreathingActivity : Activity
 {
-    private int _breathCount = 0;
+    private int _breathCount;
     private int _repTime = 4;
     private float _reps;
 
@@ -23,7 +23,7 @@ public class BreathingActivity : Activity
 
     public void activeBreathing(int duration)
     {
-        _breathCount++;
+        _breathCount+=1;
         _reps = ((duration) / (_repTime*2));
 
         while (_reps > 0)

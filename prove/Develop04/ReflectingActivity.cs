@@ -2,7 +2,7 @@ public class ReflectingActivity : Activity
 {
     private int _repTime = 10;
     private float _reps;
-    private int _reflectCount = 0;
+    private int _reflectCount;
 
     // Activity activity = new Activity();
     List<string> _reflectingQuestions = new List<string>{"Why was this experience meaninful to you?",
@@ -53,7 +53,7 @@ public class ReflectingActivity : Activity
     }
     public void activeReflecting(int duration)
     {
-        _reflectCount++;
+        _reflectCount+=1;
         _reps = ((duration) / (_repTime));
         Console.WriteLine("\nConsider the following prompt:\n");
         Console.WriteLine($"---{GetRandomReflectingPrompt()}---\n");
@@ -77,10 +77,9 @@ public class ReflectingActivity : Activity
         Console.WriteLine($"You have completed another {duration} seconds of the Reflecting Activity.");
         Animation();
         Thread.Sleep(2000);
-        Animation();
         Console.Clear();
     }
-    public int GetListCount()
+    public int GetReflectCount()
     {
         return _reflectCount;
     }

@@ -1,8 +1,9 @@
 public class Activity
 {
-    private int _duration = 0;
-    private string _message;
-    private string _prompt;
+    // private int _duration = 0;
+    // private string _message;
+    // private string _prompt;
+    private int _count=0;
 
     
                                                     
@@ -53,6 +54,14 @@ public class Activity
                 i = 0;
             }
         }
+    }
+    public void CountMethod()
+    {
+        _count++;
+    }
+    public int GetCountMethod()
+    {
+        return _count;
     }
 
 }
