@@ -7,10 +7,12 @@ class Program
         // Create some videos
         var video1 = new Video()
         {
-            Title = "How to Make a Cake",
-            Author = "Jane Smith",
-            Length = 1200, // 20 minutes
-            Comments = new List<Comment>()
+            _title = "How to Make a Cake",
+            _author = "Jane Smith",
+            _length = 1200, // 20 minutes
+            _genre = "Instructional",
+            _comments = new List<Comment>()
+            
             {
                 new Comment() { Name = "John", Text = "Great recipe, thanks for sharing!" },
                 new Comment() { Name = "Sarah", Text = "I'm definitely trying this out!" }
@@ -19,10 +21,11 @@ class Program
 
         var video2 = new Video()
         {
-            Title = "Gardening Tips for Beginners",
-            Author = "Mike Johnson",
-            Length = 1800, // 30 minutes
-            Comments = new List<Comment>()
+            _title = "Gardening Tips for Beginners",
+            _author = "Mike Johnson",
+            _length = 1800, // 30 minutes
+            _genre = "Instructional",
+            _comments = new List<Comment>()
             {
                 new Comment() { Name = "Mary", Text = "I never knew about planting, thanks for the tip!" },
                 new Comment() { Name = "Bob", Text = "This was really helpful, keep up the good work!" },
@@ -32,10 +35,11 @@ class Program
 
         var video3 = new Video()
         {
-            Title = "10 Minute Yoga Routine",
-            Author = "Samantha Lee",
-            Length = 600, // 10 minutes
-            Comments = new List<Comment>()
+            _title = "10 Minute Yoga Routine",
+            _author = "Samantha Lee",
+            _length = 600, // 10 minutes
+            _genre = "Exercise",
+            _comments = new List<Comment>()
             {
                 new Comment() { Name = "Emily", Text = "This was a great way to start my day, thanks!" },
                 new Comment() { Name = "Jack", Text = "I'm new to yoga and this was perfect for me, thanks!" }
@@ -50,13 +54,14 @@ class Program
         // Display video info and comments
         foreach (var video in videos)
         {
-            Console.WriteLine($"Title: {video.Title}");
-            Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.Length} seconds");
+            Console.WriteLine($"Title: {video._title}");
+            Console.WriteLine($"Author: {video._author}");
+            Console.WriteLine($"Length: {video._length} seconds");
+            Console.WriteLine($"Genre: {video._genre}");
             Console.WriteLine($"Number of comments: {video.NumberOfComments()}");
 
             Console.WriteLine("Comments:");
-            foreach (var comment in video.Comments)
+            foreach (var comment in video._comments)
             {
                 Console.WriteLine($"Name: {comment.Name}");
                 Console.WriteLine($"Text: {comment.Text}");

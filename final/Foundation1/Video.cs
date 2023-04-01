@@ -1,12 +1,13 @@
 public class Video
 {
-    public string Title { get; set; }
-    public string Author { get; set; }
-    public int Length { get; set; }
-    public List<Comment> Comments { get; set; }
+    public string _title { get; set; }
+    public string _author { get; set; }
+    public int _length { get; set; }
+    public List<Comment> _comments { get; set; }
+    public string _genre{get; set;}
 
     public int NumberOfComments()
     {
-        return Comments.Count;
+        return _comments.Count;
     }
 }
