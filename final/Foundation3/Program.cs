@@ -2,9 +2,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Address address1 = new Address("123 Main St", "Anytown", "CA", "12345");
+        Address address1 = new Address("123 Main St", "Anytown", "ID", "12345");
         Address address2 = new Address("456 Elm St", "Othertown", "CA", "67890");
-        Address address3 = new Address("789 Maple St", "Thistown", "CA", "23456");
+        Address address3 = new Address("789 Maple St", "Thistown", "MA", "23456");
 
         Lecture lecture = new Lecture("Electronic Devices Lecture", "Learn about transistors and diodes", new DateTime(2023, 4, 15, 13, 30, 0), address1, "Jane", 50);
 

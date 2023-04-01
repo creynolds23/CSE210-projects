@@ -1,19 +1,21 @@
-public class Goal
+public abstract class Goal
 {
-    string _nameGoal;
-    string _typeGoal;
-    string _descriptionGoal;
-    int _scoreGoal;
+    public string _nameGoal;
+    public string _typeGoal;
+    public string _descriptionGoal;
+    public int _scoreGoal;
+    public bool _achieved;
 
 
 
-// public Goal(string nameGoal, string typeGoal, string descriptionGoal, int scoreGoal)
-// {
-//     _nameGoal = nameGoal;
-//     _typeGoal = typeGoal;
-//     _descriptionGoal = descriptionGoal;
-//     _scoreGoal = scoreGoal;
-// }
+public Goal(string nameGoal, string typeGoal, string descriptionGoal, int scoreGoal, bool achieved)
+{
+    _nameGoal = nameGoal;
+    _typeGoal = typeGoal;
+    _descriptionGoal = descriptionGoal;
+    _scoreGoal = scoreGoal;
+    _achieved = achieved;
+}
 
     public virtual void GoalPrep()
     {
@@ -23,7 +25,11 @@ public class Goal
     public virtual void Display()
     {
 
-         Console.WriteLine($"[ ] {_nameGoal} ({_descriptionGoal})");
     }
-    
+    public virtual void IsFinished(int userValue)
+    {
+
+    }
+
+    // public abstract string GetStringFormat();
 }
