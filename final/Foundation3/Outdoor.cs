@@ -1,19 +1,19 @@
 class OutdoorGathering : Event
 {
-    private string weather;
+    private string _weather;
 
     public OutdoorGathering(string title, string description, DateTime dateTime, Address address, string weather) : base(title, description, dateTime, address)
     {
-        this.weather = weather;
+        this._weather = weather;
     }
 
     public override string GetFullDetails()
     {
-        return $"{base.GetFullDetails()}\nEvent Type: Outdoor Gathering\nWeather: {weather}";
+        return $"{base.GetFullDetails()}\nEvent Type: Outdoor Gathering\nWeather: {_weather}";
     }
 
     public override string GetShortDescription()
     {
-        return $"Outdoor Gathering: {title} on {dateTime.Date.ToShortDateString()}";
+        return $"Outdoor Gathering: {_title} on {_dateTime.Date.ToShortDateString()}";
     }
 }

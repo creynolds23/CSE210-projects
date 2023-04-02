@@ -1,21 +1,21 @@
 class Event
 {
-    public string title;
-    private string description;
-    public DateTime dateTime;
-    private Address address;
+    public string _title;
+    private string _description;
+    public DateTime _dateTime;
+    private Address _address;
 
     public Event(string title, string description, DateTime dateTime, Address address)
     {
-        this.title = title;
-        this.description = description;
-        this.dateTime = dateTime;
-        this.address = address;
+        this._title = title;
+        this._description = description;
+        this._dateTime = dateTime;
+        this._address = address;
     }
 
     public virtual string GetStandardDetails()
     {
-        return $"{title}\n{description}\n{dateTime}\n{address.GetFormattedAddress()}";
+        return $"{_title}\n{_description}\n{_dateTime}\n{_address.GetFormattedAddress()}";
     }
 
     public virtual string GetFullDetails()
@@ -25,6 +25,6 @@ class Event
 
     public virtual string GetShortDescription()
     {
-        return $"Generic Event: {title} on {dateTime.Date.ToShortDateString()}";
+        return $"Generic Event: {_title} on {_dateTime.Date.ToShortDateString()}";
     }
 }

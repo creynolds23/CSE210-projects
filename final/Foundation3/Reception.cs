@@ -1,19 +1,19 @@
 class Reception : Event
 {
-    private string rsvpEmail;
+    private string _rsvpEmail;
 
     public Reception(string title, string description, DateTime dateTime, Address address, string rsvpEmail) : base(title, description, dateTime, address)
     {
-        this.rsvpEmail = rsvpEmail;
+        this._rsvpEmail = rsvpEmail;
     }
 
     public override string GetFullDetails()
     {
-        return $"{base.GetFullDetails()}\nEvent Type: Reception\nRSVP Email: {rsvpEmail}";
+        return $"{base.GetFullDetails()}\nEvent Type: Reception\nRSVP Email: {_rsvpEmail}";
     }
 
     public override string GetShortDescription()
     {
-        return $"Reception: {title} on {dateTime.Date.ToShortDateString()}";
+        return $"Reception: {_title} on {_dateTime.Date.ToShortDateString()}";
     }
 }
