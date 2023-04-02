@@ -1,10 +1,10 @@
 class Activity {
-    private DateTime currentdate = DateTime.Today;
-    public int length; // in minutes
+    private DateTime _currentdate = DateTime.Today;
+    public int _length; // in minutes
 
     public Activity(DateTime date, int length) {
-        currentdate = date;
-        this.length = length;
+        _currentdate = date;
+        this._length = length;
     }
 
     public virtual double GetDistance() {
@@ -20,6 +20,6 @@ class Activity {
     }
 
     public virtual string GetSummary() {
-        return $"{currentdate.ToString("dd MMM yyyy")}";
+        return $"{_currentdate.ToString("dd MMM yyyy")}";
     }
 }

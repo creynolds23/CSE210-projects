@@ -1,23 +1,23 @@
 class Running : Activity {
-    private double distance; // in miles
+    private double _distance; // in miles
 
     public Running(DateTime date, int length, double distance) : base(date, length) {
-        this.distance = distance;
+        this._distance = distance;
     }
 
     public override double GetDistance() {
-        return distance;
+        return _distance;
     }
 
     public override double GetSpeed() {
-        return distance / (length / 60.0);
+        return _distance / (_length / 60.0);
     }
 
     public override double GetPace() {
-        return (length / 60.0) / distance;
+        return (_length / 60.0) / _distance;
     }
 
     public override string GetSummary() {
-        return $"{base.GetSummary()} Running ({length} min)- Distance {distance:F1} miles, Speed {GetSpeed():F1} mph, Pace: {GetPace():F1} min per mile";
+        return $"{base.GetSummary()} Running ({_length} min)- Distance {_distance:F1} miles, Speed {GetSpeed():F1} mph, Pace: {GetPace():F1} min per mile";
     }
 }
